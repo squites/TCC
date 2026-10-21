@@ -1,0 +1,24 @@
+{
+  "counters": {
+    "cycles": 5021318070,
+    "instructions": 35559172651,
+    "INST_LDST": 5581003636,
+    "INST_BRANCH": 4075044003,
+    "BRANCH_MISPRED_NONSPEC": 133352,
+    "MAP_SIMD_UOP": 2511432761,
+    "L1D_CACHE_MISS_LD": 46443347,
+    "L1D_CACHE_MISS_ST": 525887622,
+    "L1I_CACHE_MISS_DEMAND": 112441,
+    "L1D_TLB_MISS": 2828078
+  },
+  "time": {
+    "wall_ns": 4735688000,
+    "user_ns": 1576719000,
+    "sys_ns": 146990000
+  },
+  "derived": {
+    "ipc": 7.081641,
+    "cpi": 0.141210
+  },
+  "threads_measured": 2
+}

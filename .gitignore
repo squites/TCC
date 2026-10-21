@@ -1,0 +1,18 @@
+# gerados pelos scripts (recriados ao rodar)
+ir_opt/
+ir_opt_dyn/
+*.bin
+*.s
+*.o
+
+# ferramentas e benchmarks de terceiros (baixados à parte)
+tools/mperf/
+cbench/
+
+# sistema
+.DS_Store
+__pycache__/
+
+# llvm/extras
+extra/
+extra/

@@ -1,0 +1,38 @@
+digraph "CFG for 'test_reduction' function" {
+	label="CFG for 'test_reduction' function";
+
+	Node0x600002935e00 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70", fontname="Courier",label="{%2|{<s0>T|<s1>F}}"];
+	Node0x600002935e00:s0 -> Node0x600002935e50;
+	Node0x600002935e00:s1 -> Node0x600002935ea0;
+	Node0x600002935e50 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d24b4070", fontname="Courier",label="{%4|{<s0>T|<s1>F}}"];
+	Node0x600002935e50:s0 -> Node0x600002935ef0;
+	Node0x600002935e50:s1 -> Node0x600002935f40;
+	Node0x600002935f40 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d8564670", fontname="Courier",label="{%7|{<s0>T|<s1>F}}"];
+	Node0x600002935f40:s0 -> Node0x600002935f90;
+	Node0x600002935f40:s1 -> Node0x600002935fe0;
+	Node0x600002935fe0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70", fontname="Courier",label="{%9}"];
+	Node0x600002935fe0 -> Node0x600002936030;
+	Node0x600002936030 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#c32e3170", fontname="Courier",label="{%12|{<s0>T|<s1>F}}"];
+	Node0x600002936030:s0 -> Node0x600002936170;
+	Node0x600002936030:s1 -> Node0x600002936030;
+	Node0x600002936170 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#de614d70", fontname="Courier",label="{%29|{<s0>T|<s1>F}}"];
+	Node0x600002936170:s0 -> Node0x600002935ea0;
+	Node0x600002936170:s1 -> Node0x6000029361c0;
+	Node0x6000029361c0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#e36c5570", fontname="Courier",label="{%31|{<s0>T|<s1>F}}"];
+	Node0x6000029361c0:s0 -> Node0x600002935ef0;
+	Node0x6000029361c0:s1 -> Node0x600002935f90;
+	Node0x600002935f90 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70", fontname="Courier",label="{%33}"];
+	Node0x600002935f90 -> Node0x6000029362b0;
+	Node0x6000029362b0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#be242e70", fontname="Courier",label="{%37|{<s0>T|<s1>F}}"];
+	Node0x6000029362b0:s0 -> Node0x6000029363a0;
+	Node0x6000029362b0:s1 -> Node0x6000029362b0;
+	Node0x6000029363a0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#dc5d4a70", fontname="Courier",label="{%45|{<s0>T|<s1>F}}"];
+	Node0x6000029363a0:s0 -> Node0x600002935ea0;
+	Node0x6000029363a0:s1 -> Node0x600002935ef0;
+	Node0x600002935ef0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d6524470", fontname="Courier",label="{%47}"];
+	Node0x600002935ef0 -> Node0x6000029363f0;
+	Node0x600002935ea0 [shape=record,color="#3d50c3ff", style=filled, fillcolor="#d0473d70", fontname="Courier",label="{%50}"];
+	Node0x6000029363f0 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{%52|{<s0>T|<s1>F}}"];
+	Node0x6000029363f0:s0 -> Node0x600002935ea0;
+	Node0x6000029363f0:s1 -> Node0x6000029363f0;
+}

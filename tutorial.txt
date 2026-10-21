@@ -1,0 +1,6 @@
+Como rodar o programa:
+1) gerar a IR (base + ssa)
+`./run.sh ./benchmarks/matmul.c matmul`
+
+2) rodar o experimento estatico
+`./experimento_cumulativo.sh`

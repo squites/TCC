@@ -1,0 +1,5 @@
+digraph "CFG for 'test_deletion' function" {
+	label="CFG for 'test_deletion' function";
+
+	Node0x600002935c20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870", fontname="Courier",label="{%1}"];
+}

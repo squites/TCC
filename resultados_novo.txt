@@ -1,0 +1,128 @@
+==========================================
+=== PROGRAMA: matmul_hard_2_pure ===
+==========================================
+baseline: 59123966041.00 nJ
+caracterização: ir/matmul_hard_2_pure_ssa.ll: CPU-bound (razão CPU/MEM = 2.25)
+
+--- Sequência seq1: loop-mssa(licm) | loop(loop-unroll-full) | loop-vectorize ---
+  step 1 (+loop-mssa(licm)): 45711110233.00 nJ (-22.69%)
+  step 2 (+loop(loop-unroll-full)): 45711110233.00 nJ (-22.69%)
+  step 3 (+loop-vectorize): 45711110233.00 nJ (-22.69%)
+
+--- Sequência seq1: loop-mssa(licm) | loop-unroll ---
+  step 1 (+loop-mssa(licm)): 45711110233.00 nJ (-22.69%)
+  step 2 (+loop-unroll): 45711110233.00 nJ (-22.69%)
+
+--- Sequência seq2: loop-mssa(licm) | loop-vectorize | loop(loop-unroll-full) ---
+  step 1 (+loop-mssa(licm)): 45711110233.00 nJ (-22.69%)
+  step 2 (+loop-vectorize): 45711110233.00 nJ (-22.69%)
+  step 3 (+loop(loop-unroll-full)): 45711110233.00 nJ (-22.69%)
+
+--- Sequência seq3: loop(loop-unroll-full) | loop-vectorize ---
+  step 1 (+loop(loop-unroll-full)): 59123966041.00 nJ (+0.00%)
+  step 2 (+loop-vectorize): 59123966041.00 nJ (+0.00%)
+
+--- Sequência seq4: loop-vectorize | loop(loop-unroll-full) ---
+  step 1 (+loop-vectorize): 59123966041.00 nJ (+0.00%)
+  step 2 (+loop(loop-unroll-full)): 59123966041.00 nJ (+0.00%)
+
+--- Sequência seq5: loop-mssa(loop-rotate,licm) | loop-vectorize ---
+  step 1 (+loop-mssa(loop-rotate,licm)): 43968470525.00 nJ (-25.63%)
+  step 2 (+loop-vectorize): 43968470525.00 nJ (-25.63%)
+
+==========================================
+=== PROGRAMA: matmul_stress ===
+==========================================
+baseline: 109052989542.00 nJ
+caracterização: ir/matmul_stress_ssa.ll: Memory-bound (razão CPU/MEM = 1.75)
+
+--- Sequência seq1: loop-mssa(licm) | loop(loop-unroll-full) | loop-vectorize ---
+  step 1 (+loop-mssa(licm)): 95636991078.00 nJ (-12.30%)
+  step 2 (+loop(loop-unroll-full)): 95636991078.00 nJ (-12.30%)
+  step 3 (+loop-vectorize): 95636991078.00 nJ (-12.30%)
+
+--- Sequência seq1: loop-mssa(licm) | loop-unroll ---
+  step 1 (+loop-mssa(licm)): 95636991078.00 nJ (-12.30%)
+  step 2 (+loop-unroll): 95636991078.00 nJ (-12.30%)
+
+--- Sequência seq2: loop-mssa(licm) | loop-vectorize | loop(loop-unroll-full) ---
+  step 1 (+loop-mssa(licm)): 95636991078.00 nJ (-12.30%)
+  step 2 (+loop-vectorize): 95636991078.00 nJ (-12.30%)
+  step 3 (+loop(loop-unroll-full)): 95636991078.00 nJ (-12.30%)
+
+--- Sequência seq3: loop(loop-unroll-full) | loop-vectorize ---
+  step 1 (+loop(loop-unroll-full)): 109052989542.00 nJ (+0.00%)
+  step 2 (+loop-vectorize): 109052989542.00 nJ (+0.00%)
+
+--- Sequência seq4: loop-vectorize | loop(loop-unroll-full) ---
+  step 1 (+loop-vectorize): 109052989542.00 nJ (+0.00%)
+  step 2 (+loop(loop-unroll-full)): 109052989542.00 nJ (+0.00%)
+
+--- Sequência seq5: loop-mssa(loop-rotate,licm) | loop-vectorize ---
+  step 1 (+loop-mssa(loop-rotate,licm)): 93748222395.00 nJ (-14.03%)
+  step 2 (+loop-vectorize): 93748222395.00 nJ (-14.03%)
+
+==========================================
+=== PROGRAMA: 1D_conv ===
+==========================================
+baseline: 207000905.00 nJ
+caracterização: ir/1D_conv_ssa.ll: Memory-bound (razão CPU/MEM = 1.69)
+
+--- Sequência seq1: loop-mssa(licm) | loop(loop-unroll-full) | loop-vectorize ---
+  step 1 (+loop-mssa(licm)): 207000905.00 nJ (+0.00%)
+  step 2 (+loop(loop-unroll-full)): 182500996.50 nJ (-11.84%)
+  step 3 (+loop-vectorize): 105251177.50 nJ (-49.15%)
+
+--- Sequência seq1: loop-mssa(licm) | loop-unroll ---
+  step 1 (+loop-mssa(licm)): 207000905.00 nJ (+0.00%)
+  step 2 (+loop-unroll): 182500996.50 nJ (-11.84%)
+
+--- Sequência seq2: loop-mssa(licm) | loop-vectorize | loop(loop-unroll-full) ---
+  step 1 (+loop-mssa(licm)): 207000905.00 nJ (+0.00%)
+  step 2 (+loop-vectorize): 207000905.00 nJ (+0.00%)
+  step 3 (+loop(loop-unroll-full)): 182500996.50 nJ (-11.84%)
+
+--- Sequência seq3: loop(loop-unroll-full) | loop-vectorize ---
+  step 1 (+loop(loop-unroll-full)): 182500996.50 nJ (-11.84%)
+  step 2 (+loop-vectorize): 105251177.50 nJ (-49.15%)
+
+--- Sequência seq4: loop-vectorize | loop(loop-unroll-full) ---
+  step 1 (+loop-vectorize): 207000905.00 nJ (+0.00%)
+  step 2 (+loop(loop-unroll-full)): 182500996.50 nJ (-11.84%)
+
+--- Sequência seq5: loop-mssa(loop-rotate,licm) | loop-vectorize ---
+  step 1 (+loop-mssa(loop-rotate,licm)): 166000706.00 nJ (-19.81%)
+  step 2 (+loop-vectorize): 158688203.50 nJ (-23.34%)
+
+==========================================
+=== PROGRAMA: 2D_conv ===
+==========================================
+baseline: 440879632.00 nJ
+caracterização: ir/2D_conv_ssa.ll: CPU-bound (razão CPU/MEM = 4.24)
+
+--- Sequência seq1: loop-mssa(licm) | loop(loop-unroll-full) | loop-vectorize ---
+  step 1 (+loop-mssa(licm)): 399104360.00 nJ (-9.48%)
+  step 2 (+loop(loop-unroll-full)): 327557194.50 nJ (-25.70%)
+  step 3 (+loop-vectorize): 163084179.50 nJ (-63.01%)
+
+--- Sequência seq1: loop-mssa(licm) | loop-unroll ---
+  step 1 (+loop-mssa(licm)): 399104360.00 nJ (-9.48%)
+  step 2 (+loop-unroll): 327557194.50 nJ (-25.70%)
+
+--- Sequência seq2: loop-mssa(licm) | loop-vectorize | loop(loop-unroll-full) ---
+  step 1 (+loop-mssa(licm)): 399104360.00 nJ (-9.48%)
+  step 2 (+loop-vectorize): 399104360.00 nJ (-9.48%)
+  step 3 (+loop(loop-unroll-full)): 327557194.50 nJ (-25.70%)
+
+--- Sequência seq3: loop(loop-unroll-full) | loop-vectorize ---
+  step 1 (+loop(loop-unroll-full)): 354709690.50 nJ (-19.55%)
+  step 2 (+loop-vectorize): 165690279.50 nJ (-62.42%)
+
+--- Sequência seq4: loop-vectorize | loop(loop-unroll-full) ---
+  step 1 (+loop-vectorize): 440879632.00 nJ (+0.00%)
+  step 2 (+loop(loop-unroll-full)): 354709690.50 nJ (-19.55%)
+
+--- Sequência seq5: loop-mssa(loop-rotate,licm) | loop-vectorize ---
+  step 1 (+loop-mssa(loop-rotate,licm)): 205504867.00 nJ (-53.39%)
+  step 2 (+loop-vectorize): 196948376.50 nJ (-55.33%)
+

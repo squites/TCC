@@ -1,0 +1,1 @@
+loop-mssa(loop-rotate,licm) | loop-vectorize

@@ -1,0 +1,1 @@
+loop-mssa(licm) | loop(loop-unroll-full) | loop-vectorize
